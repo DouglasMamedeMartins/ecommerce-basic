@@ -21,9 +21,9 @@ export const StepFinish = () => {
         e informar o andamento do pedido.
       </p>
       <Button>
-        <Link target="_blank" href={linkZap}>
+        <a href={linkZap} target="_blank" rel="noopener noreferrer">
           Enviar para o WhatsApp
-        </Link>
+        </a>
       </Button>
     </div>
   );
