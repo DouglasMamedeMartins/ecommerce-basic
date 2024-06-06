@@ -18,14 +18,14 @@ export const StepFinish = () => {
         e informar o andamento do pedido.
       </p>
       <Button>
-        <Link
+        <a
           target="_blank"
           href={`https:/wa.me//${process.env.NEXT_PUBLIC_ZAP}?text=${encodeURI(
             message
           )}`}
         >
           Enviar para o WhatsApp
-        </Link>
+        </a>
       </Button>
     </div>
   );
