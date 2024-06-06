@@ -7,9 +7,6 @@ export const StepFinish = () => {
   const { name } = useCheckoutStore((state) => state);
 
   const message = generateMessage();
-  const linkZap = `https:/wa.me//${
-    process.env.NEXT_PUBLIC_ZAP
-  }?text=${encodeURI(message)}`;
 
   return (
     <div className="text-center flex flex-col gap-5">
@@ -21,7 +18,12 @@ export const StepFinish = () => {
         e informar o andamento do pedido.
       </p>
       <Button>
-        <Link target="_blank" href={linkZap}>
+        <Link
+          target="_blank"
+          href={`https:/wa.me//${process.env.NEXT_PUBLIC_ZAP}?text=${encodeURI(
+            message
+          )}`}
+        >
           Enviar para o WhatsApp
         </Link>
       </Button>
