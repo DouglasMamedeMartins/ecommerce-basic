@@ -1,4 +1,9 @@
 {
-  "rewrites": [{ "source": "/:a*", "destination": "/" }],
-  "cleanUrls": true
+  "redirects": [
+    {
+      "source": "/wa.me/:path*",
+      "destination": "https://wa.me/:path*",
+      "statusCode": 301
+    }
+  ]
 }

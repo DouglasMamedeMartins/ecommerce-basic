@@ -17,15 +17,16 @@ export const StepFinish = () => {
         Agora envie seu pedido ao nosso WhatsApp para concluir. Irei te atender
         e informar o andamento do pedido.
       </p>
-
-      <a
-        target="_blank"
-        href={`https:/wa.me//${process.env.NEXT_PUBLIC_ZAP}?text=${encodeURI(
-          message
-        )}`}
-      >
-        Enviar para o WhatsApp
-      </a>
+      <Button>
+        <Link
+          target="_blank"
+          href={`https:/wa.me//${process.env.NEXT_PUBLIC_ZAP}?text=${encodeURI(
+            message
+          )}`}
+        >
+          Enviar para o WhatsApp
+        </Link>
+      </Button>
     </div>
   );
 };
